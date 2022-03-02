@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+     <h1>Calcular Idade</h1>
+     <button onclick="Calculadora()">Iniciar Cálculo</button>
+    <button type="reset" class="btn btn-danger mt-4 ml-5" id="clear">Limpar</button>
+      <body background="https://1.bp.blogspot.com/-CmM78l70IYY/YRW0qal92EI/AAAAAAAAD6M/UkDf-x6cHcoDutRbKksBCLpeRabXsxaowCLcBGAsYHQ/s702/53FB57D0-B2FD-410B-B725-1B1D5534759D.png">
+   
+    <script>
+
+       function Calculadora() {
+       var ano_atual = parseFloat(prompt("Digite o ano atual "));
+       var ano_aniver = parseFloat(prompt("Digite o ano de seu nascimento"));
+         if (ano_atual < ano_aniver){
+        throw "Data Inválida";
+      }
+      else {
+        console.log(aniversario(ano_atual,ano_aniver));
+      } 
+       }
+
+      var aniversario = (a,b) => a-b;
+      
+    </script>
+  </body>
+</html>
