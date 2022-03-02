@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+ 
+    <div align="center">        
+    <h1>Calculadora</h1>
+    <button onclick="Calculadora()">Iniciar Cálculo</button>
+      <button type="reset" class="btn btn-danger mt-4 ml-5" id="clear">Limpar</button>
+      <body background="https://img.freepik.com/fotos-gratis/fundo-de-piso-de-madeira-clara_53876-90087.jpg?size=626&ext=jpg">
+    </div>
+    <script>
+
+      function Calculadora() {
+       var n1 = parseFloat(prompt("Digite um valor "));
+       var n2 = parseFloat(prompt("Digite um valor "));
+
+        var opcao = parseInt(prompt("Escolha uma das opções: 1-SOMA, 2-SUBTRAÇÃO, 3-MULTIPLICAÇÃO, 4-DIVISÃO "));
+
+        if(opcao === 1){
+          soma(n1,n2);
+        }
+
+        else if(opcao ===2){
+          subtracao(n1,n2);
+        }
+
+        else if(opcao ===3){
+          console.log(multiplicacao(n1,n2));
+        }
+
+        else if(opcao ===4){
+          console.log(divisao(n1,n2));
+        }
+
+        else {
+          console.log("opção inválida");
+        }        
+      }
+
+      function soma(a,b) {
+         var result = a + b;
+         console.log("O resultado da soma é: ",result);    
+      }
+
+      let subtracao = function () {
+        console.log (a-b);
+      }
+
+      var multiplicacao = (a,b) => a * b; 
+
+      var divisao = (a,b) => a / b;
+    
+    </script> 
+  </body>
+</html>
