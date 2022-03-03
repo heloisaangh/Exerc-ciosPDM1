@@ -12,7 +12,9 @@
     <h1>Calculadora</h1>
     <button onclick="Calculadora()">Iniciar Cálculo</button>
       <button type="reset" class="btn btn-danger mt-4 ml-5" id="clear">Limpar</button>
-      <body background="https://img.freepik.com/fotos-gratis/fundo-de-piso-de-madeira-clara_53876-90087.jpg?size=626&ext=jpg">
+      <body background="">
+        <h3><p id= "res"></p></h3>>
+        
     </div>
     <script>
 
@@ -40,7 +42,9 @@
 
         else {
           console.log("opção inválida");
-        }        
+        } 
+        
+       
       }
 
       function soma(a,b) {
@@ -48,14 +52,19 @@
          console.log("O resultado da soma é: ",result);    
       }
 
-      let subtracao = function () {
+       let subtracao = function () {
         console.log (a-b);
       }
 
-      var multiplicacao = (a,b) => a * b; 
+      var multiplicacao = (a,b) => {var result=a * b;
+                 document.getElementById("res").innerHTML = "O resultado da multiplicação é: " + result;
+      }
 
       var divisao = (a,b) => a / b;
     
     </script> 
   </body>
 </html>
+const  d = new date();
+d.getFullYear();
+
