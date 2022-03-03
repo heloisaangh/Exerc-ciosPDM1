@@ -8,25 +8,39 @@
   </head>
   <body>
      <h1>Calcular Idade</h1>
+    <h3><p id= "res"></p></h3>>
      <button onclick="Calculadora()">Iniciar Cálculo</button>
     <button type="reset" class="btn btn-danger mt-4 ml-5" id="clear">Limpar</button>
-      <body background="https://1.bp.blogspot.com/-CmM78l70IYY/YRW0qal92EI/AAAAAAAAD6M/UkDf-x6cHcoDutRbKksBCLpeRabXsxaowCLcBGAsYHQ/s702/53FB57D0-B2FD-410B-B725-1B1D5534759D.png">
+      <body background="">
    
     <script>
-
-       function Calculadora() {
-       var ano_atual = parseFloat(prompt("Digite o ano atual "));
-       var ano_aniver = parseFloat(prompt("Digite o ano de seu nascimento"));
-         if (ano_atual < ano_aniver){
-        throw "Data Inválida";
-      }
-      else {
-        console.log(aniversario(ano_atual,ano_aniver));
-      } 
-       }
-
-      var aniversario = (a,b) => a-b;
       
+      const d = new Date();
+        var ano = d.getFullYear();
+      
+       function Calculadora() {
+       var ano_aniver = parseFloat(prompt("Digite o ano de seu nascimento"));
+
+         try {
+
+           if (ano < ano_aniver || ano <= 0 ){
+               throw "Data Inválida";
+           }
+
+            console.log(aniversario(ano,ano_aniver));
+        } catch (err) {
+            console.log("Erro: " + err);
+           alert(err);
+        }
+
+       }
+      
+        var aniversario = (a,b) => { 
+          var resultado = a-b;
+                                    
+        document.getElementById("res").innerHTML = "Quem nasceu em " + b +" vai completar " + resultado + " anos no ano de " + a;
+        }
+
     </script>
   </body>
 </html>
